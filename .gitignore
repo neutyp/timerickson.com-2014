@@ -16,5 +16,17 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+
+# cactus
+*/.build/
+
+*/.deploy/
 .build/error.html
 .build/index.html
+.build/static/css/day.css
+.build/static/css/main.css
+.build/static/css/night.css
+.build/static/css/reset.css
+.build/static/css/style.css
+.build/static/images/avatar@4x.jpg
+.build/static/js/main.js
