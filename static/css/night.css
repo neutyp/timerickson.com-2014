@@ -1,0 +1,11 @@
+canvas {
+	visibility: visible;
+	/* night cycle! */
+}
+
+body {
+	background-color: #000;
+	color: #aaa;
+}
+
+a, h1 { color: #fff; }

@@ -1,19 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
+<canvas id="projector" width="100" height="100%">
+  <!-- Your browser does not support the Canvas element. -->
+</canvas>
+
+
 <section id="wrapper">
+
   <header id="header">
-    <img id="avatar" class="2x" src="{% static '/images/avatar.jpg' %}"/>
-      <h1>{% block title %}Profile{% endblock title %}</h1>
-    <h2>Small personal page.</h2>
+    <img id="avatar" class="2x" src="{% static '/images/avatar@4x.jpg' %}"/>
+      <h1>{% block title %}Tim Erickson{% endblock title %}</h1>
+    <h2>I create digital things.</h2>
   </header> <!--header-->
 
   <p>I currently work as a UI/UX designer at <a href="https://classdojo.com/" target="_blank">ClassDojo</a> and a blah at <a href="http://www.blah.com/" target="_blank">blah</a>. I co-founded <a href="http://neutyp.com/" target="_blank">neutyp</a> - a design, development, branding and blah studio. We've worked on projects for a variety of clients, from blah to blah.</p>
   <p>I contribute to the <a href="http://blah.com" target="_blank">blah</a> project and publish articles on <a href="https://medium.com/@neutyp" target="_blank">Medium</a> in the little spare time that I have. I like creating blah like <a href="http://neutyp.github.io/logistics/" target="_blank">Logistics</a> on my <a href="https://github.com/timerickson" target="_blank">GitHub</a> account and designing cool stuff on <a href="http://www.behance.net/timerickson" target="_blank">Behance</a>. I also tend to release cool snippets of code as <a href="https://gist.github.com/neutyp" target="_blank">Gists</a>.</p>
   <p>I'm an aspiring blah, blah and entrepreneur. I'm always looking for new opportunities, so if you think I can help, feel free to send me an <a href="mailto:neutyp@gmail.com" target="_blank">email</a> or download my <a href="http://timerickson.com/resume.pdf" target="_blank">resume</a>.</p>
   <p>I'm most active on <a href="https://twitter.com/neutyp" target="_blank">Twitter</a>, so follow me for the latest.</p>
-  <!-- <p>The profile starting point is a small personal landing page. It displays your avatar and generates a snippet of text, suitable for a description or personal information.</p> -->
 
 </section> <!--wrapper-->
+
+<script type="text/javascript">
+
+  
+</script>
 
 {% endblock content %}

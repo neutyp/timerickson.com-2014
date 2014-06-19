@@ -1,0 +1,87 @@
+/*=========================================
+Base
+=========================================== */
+
+body {
+	font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #777;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+canvas {
+	visibility: hidden; /* default for day cycle */
+	position: fixed;
+	z-index: -1;
+}
+
+#wrapper {
+	padding: 100px 40px 100px 40px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#header {
+	position: relative;
+
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+
+	text-align: center;
+
+	border-bottom: 1px solid #eee;
+}
+
+#avatar {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+
+	margin-bottom: 20px;
+
+	border-radius: 50%; /* Make it a circle */
+}
+
+
+/*=========================================
+Typography
+=========================================== */
+
+/* Accent color */
+a {
+	text-decoration: none;
+	color: #5694f1;
+	font-weight: 400;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 20px;
+	color: #222;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 300;
+	color: #aaa; 
+	margin-top: 10px;
+}
+
+p {
+	line-height: 1.8;
+	 margin-bottom: 30px;
+	 font-size: 16px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 540px) {
+	#wrapper { padding:40px; }
+	#header { margin-bottom: 40px; }
+	a#docs { display: none; }
+}
+
+@media screen and (max-width:440px) {
+	#wrapper { padding:20px; }
+	#header { margin-bottom: 20px; }
+}
