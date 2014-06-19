@@ -24,11 +24,11 @@
   <title>Profile</title>
   {% endblock header %}
 
-  <meta name="description" content="Tim Erickson create digital things">
+  <meta name="description" content="Tim Erickson creates digital things">
   <meta name="author" content="Tim Erickson">
   <meta name="designer" content="Tim Erickson">
   <meta name="rating" content="general">
-  <meta name="keywords" content="tim,erickson,web,design,development">
+  <meta name="keywords" content="tim,erickson,web,design,development,photography,photographer">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=yes">
@@ -37,7 +37,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tim Erickson">
   <meta property="og:url" content="http://timerickson.com">
-  <meta property="og:description" content="I make stuff">
+  <meta property="og:description" content="Tim Erickson creates digital things">
   <meta property="og:image" content="http://timerickson.com/open-graph.png">
   <meta property="og:locale" content="en_US">
 
@@ -53,6 +53,7 @@
   <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
   <link rel="stylesheet" href="{% static '/css/reset.css' %}">
   <link rel="stylesheet" href="{% static '/css/main.css' %}">
+  <script src="{% static '/js/main.js' %}"></script>
 
 </head>
 
@@ -63,7 +64,6 @@
 
   {% block scripts %}
   <script src="//code.jquery.com/jquery.min.js"></script>
-  <script src="{% static '/js/main.js' %}"></script>
   <script src="{% static '/js/particles.js' %}"></script>
   {% endblock scripts %}
 </body>
