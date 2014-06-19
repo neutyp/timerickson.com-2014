@@ -31,3 +31,5 @@ CVS
 .build/static/images/avatar@4x.jpg
 .build/static/js/main.js
 .build/static/js/particles.js
+.build/static/js/meteors.js
+.build/static/js/stars.js
