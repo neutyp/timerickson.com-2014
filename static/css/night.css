@@ -4,8 +4,13 @@ canvas {
 }
 
 body {
-	background-color: #000;
+	background-color: #0a0a0a;
 	color: #aaa;
+}
+
+#header {
+	
+	border-bottom-color: #222;
 }
 
 a, h1 { color: #fff; }

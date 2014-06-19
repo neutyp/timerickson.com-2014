@@ -2,7 +2,6 @@
 // Day/night CSS toggle
 // -----------------------
 
-
 function getStylesheet() {
   var currentTime = new Date().getHours();
   if ( currentTime <= 6 || currentTime >= 21) {
@@ -18,6 +17,7 @@ getStylesheet();
 // Adapted from an expirement by Hakim El Hattab
 // http://hakim.se/experiments/html5/particles/01/
 // -----------------------
+
 
 // variables
   
@@ -52,7 +52,6 @@ if (canvas && canvas.getContext) {
 // initialize mouse/browser actions
 
 function Initialize() {
-  canvas.addEventListener('mousemove', MouseMove, false);
   window.addEventListener('resize', ResizeCanvas, false);
   setInterval( TimeUpdate, 40 );
   
@@ -74,6 +73,8 @@ function TimeUpdate(e) {
     particle.x += particle.vx;
     particle.y += particle.vy;
     
+    // x coordinate
+
     if (particle.x > window.innerWidth) {
       particle.vx = -VELOCITY - Math.random();
     }
@@ -83,6 +84,8 @@ function TimeUpdate(e) {
     else {
       particle.vx *= 1 + (Math.random() * 0.0005);
     }
+
+    // y coordinate
     
     if (particle.y > window.innerHeight) {
       particle.vy = -VELOCITY - Math.random();
@@ -94,25 +97,13 @@ function TimeUpdate(e) {
       particle.vy *= 1 + (Math.random() * 0.0005);
     }
     
-    var distanceFactor = DistanceBetween( mouse, particle );
-    distanceFactor = Math.max( Math.min( 5 - ( distanceFactor / 10 ), 10 ), 1 );
-    
-    particle.currentSize = particle.size*distanceFactor;
-    
-    context.fillStyle = particle.color;
-    context.beginPath();
-    context.arc(particle.x,particle.y,particle.currentSize,0,Math.PI*2,true);
-    context.closePath();
+    context.fillStyle = particle.color; // define particle color
+    context.beginPath(); // begin path
+    context.arc(particle.x, particle.y, particle.size, 0, Math.PI*2, true); // make the particle a circle from 2 arcs
+    context.closePath(); // end path
     context.fill();
     
   }
-}
-
-// 
-
-function MouseMove(e) {
-  mouse.x = e.layerX;
-  mouse.y = e.layerY;
 }
 
 
