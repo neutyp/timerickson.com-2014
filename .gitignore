@@ -30,3 +30,4 @@ CVS
 .build/static/css/style.css
 .build/static/images/avatar@4x.jpg
 .build/static/js/main.js
+.build/static/js/particles.js
