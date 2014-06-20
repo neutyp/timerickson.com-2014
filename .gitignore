@@ -1,0 +1,37 @@
+# osx noise
+.DS_Store
+profile
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS
+.build/error.html
+.build/index.html
+.build/posts/project-five.html
+.build/posts/project-four.html
+.build/posts/project-one.html
+.build/posts/project-six.html
+.build/posts/project-three.html
+.build/posts/project-two.html
+.build/robots.txt
+.build/sitemap.xml
+.build/static/css/style.css
+.build/static/images/badge.png
+.build/static/images/badge@2x.png
+.build/static/images/favicon.ico
+.build/static/images/image-full.jpg
+.build/static/images/image-full@2x.jpg
+.build/static/images/image-thumbnail.jpg
+.build/static/images/image-thumbnail@2x.jpg
+.build/static/js/main.js
