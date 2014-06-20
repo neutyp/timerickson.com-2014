@@ -23,13 +23,11 @@ CVS
 */.deploy/
 .build/error.html
 .build/index.html
-.build/static/css/day.css
 .build/static/css/main.css
+.build/static/css/day.css
 .build/static/css/night.css
 .build/static/css/reset.css
 .build/static/css/style.css
 .build/static/images/avatar@4x.jpg
 .build/static/js/main.js
-.build/static/js/particles.js
-.build/static/js/meteors.js
-.build/static/js/stars.js
+.build/static/js/night.js
