@@ -1,88 +1,92 @@
 // -----------------------
-// Canvas meteors! 
-// Adapted from an expirement by Hakim El Hattab
+// Canvas stars and meteors! 
+// created by Tim Erickson
+// 
+// Inspired by an expirement from Hakim El Hattab, 
 // http://hakim.se/experiments/html5/particles/01/
+// 
+// and EveryBlock's farewell page, 2013
+// saved from url=(0026)http://www.everyblock.com/
 // -----------------------
-
 
 // variables
   
-var VELOCITY = 0.1;
-var PARTICLES = 100;
+var PARTICLES = 200; // total stars and meteors
+var RADIUS    = 1;
+var VELOCITY  = 0.2; // moving velocity of meteors
+var SPEED     = .01; // pulsing speed of stars
+var PERCENT   = 0.9; // percent of particles that are stars, not meteors
 
+// create an empty array of particles
 var particles = [];
-var colors = ["#fff", "#999"];
-var canvas = document.getElementById('meteors');
-var context;
+
+// create a 2d canvas
+var canvas = document.getElementById('night');
+var context = canvas.getContext('2d');
+
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
 
 // setup canvas and randomized particles
-
 if (canvas && canvas.getContext) {
-  context = canvas.getContext('2d');
   
   // populate the particles array
   for (var i = 0; i < PARTICLES; i++) {
     particles.push ({ 
-      x: Math.random() * window.innerWidth, // randomly set start position x
-      y: Math.random() * window.innerHeight, // randomly set start position y
-      vx: ( (Math.random() * (VELOCITY * 2)) - VELOCITY), // velocity x
-      vy: ( (Math.random() * (VELOCITY * 2)) - VELOCITY), // velocity y
-      size: 1 + Math.random(), // randomly set size
-      color: colors[ Math.floor( Math.random() * colors.length ) ] // randomly choose color
+      x: context.canvas.width * Math.random(), // x position
+      y: context.canvas.height * Math.random(), // y position
+      radius: RADIUS + Math.random(), // randomly set radius
+      alpha: Math.random(), // transparency
+      vx: ( (Math.random() * (VELOCITY * 2) ) - VELOCITY), // velocity x
+      vy: ( (Math.random() * (VELOCITY * 2) ) - VELOCITY), // velocity y
+      twinkle: (Math.random() * SPEED) * (Math.random() < 0.5 ? -1 : 1), // randomize SPEED, then randomly decide if it shold be neg or pos
+      type: Math.random()
     });
   }
   
-  Initialize();
+  setInterval(animate, 0025);
 }
 
-// initialize mouse/browser actions
 
-function Initialize() {
-  window.addEventListener('resize', ResizeCanvas, false);
-  setInterval(TimeUpdate, 0040);
-  
-  ResizeCanvas();
-}
-
-// affect the particles over time
-
-function TimeUpdate(e) {
+// animate the particles :)
+function animate() {
   
   context.clearRect (
     0, // x
     0, // y
-    window.innerWidth, // width
-    window.innerHeight // height
+    context.canvas.width, // width
+    context.canvas.height // height
   );
-  
-  var len = particles.length;
-  var particle;
-  
-  for (var i = 0; i < len; i++) {
-    particle = particles[i];
+    
+  for (var i = 0; i < particles.length; i++) {
+    var particle = particles[i];
 
-    // move the particles with velocity
-    particle.x += particle.vx;
-    particle.y += particle.vy;
+    if (particle.type > PERCENT) {
+      // move the meteors with velocity
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+    } 
+    else {
+      // make the stars fade back in after they fade out
+      if (particle.alpha > .9 || particle.alpha <= 0) {
+        particle.twinkle *= -1;
+      }
 
-    // 2d methods
-    context.fillStyle = particle.color; // define particle color
+      particle.alpha += particle.twinkle;
+    }
+
+    // 2d methods to create the circlular star
+    context.fillStyle = 'rgba(255, 255, 255,'+particle.alpha+')';
     context.beginPath();
     context.arc (
       particle.x, // x
       particle.y, // y
-      particle.size, // radius
+      particle.radius, // radius
       0, // startAngle
       Math.PI * 2, // endAngle
       true // clockwise
     );
     context.closePath();
-    context.fill();
-    
+    context.fill();    
   }
-}
-
-function ResizeCanvas(e) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
 }
