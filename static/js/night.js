@@ -13,7 +13,7 @@
   
 var PARTICLES = 200; // total stars and meteors
 var RADIUS    = 1; // radius of the average particle
-var VELOCITY  = 0.2; // moving velocity of meteors
+var VELOCITY  = 0.3; // moving velocity of meteors
 var SPEED     = .01; // pulsing speed of stars
 var PERCENT   = 0.9; // percent of particles that are stars, not meteors
 var ANIMATE   = 0025; // time in milliseconds
