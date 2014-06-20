@@ -40,7 +40,7 @@ if (canvas && canvas.getContext) {
       vx: ( (Math.random() * (VELOCITY * 2) ) - VELOCITY), // velocity x
       vy: ( (Math.random() * (VELOCITY * 2) ) - VELOCITY), // velocity y
       twinkle: (Math.random() * SPEED) * (Math.random() < 0.5 ? -1 : 1), // randomize SPEED, then randomly decide if it shold be neg or pos
-      type: Math.random()
+      type: Math.random() // randomize star vs meteor
     });
   }
   
@@ -61,7 +61,7 @@ function animate() {
   for (var i = 0; i < particles.length; i++) {
     var particle = particles[i];
 
-    if (particle.type > PERCENT) {
+    if (particle.type >= PERCENT) {
       // move the meteors with velocity
       particle.x += particle.vx;
       particle.y += particle.vy;
