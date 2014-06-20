@@ -12,13 +12,11 @@
 // variables
   
 var PARTICLES = 200; // total stars and meteors
-var RADIUS    = 1;
+var RADIUS    = 1; // radius of the average particle
 var VELOCITY  = 0.2; // moving velocity of meteors
 var SPEED     = .01; // pulsing speed of stars
 var PERCENT   = 0.9; // percent of particles that are stars, not meteors
-
-// create an empty array of particles
-var particles = [];
+var ANIMATE   = 0025; // time in milliseconds
 
 // create a 2d canvas
 var canvas = document.getElementById('night');
@@ -26,6 +24,10 @@ var context = canvas.getContext('2d');
 
 canvas.width  = window.innerWidth;
 canvas.height = window.innerHeight;
+
+
+// create an empty array of particles
+var particles = [];
 
 // setup canvas and randomized particles
 if (canvas && canvas.getContext) {
@@ -44,7 +46,7 @@ if (canvas && canvas.getContext) {
     });
   }
   
-  setInterval(animate, 0025);
+  setInterval(animate, ANIMATE);
 }
 
 
