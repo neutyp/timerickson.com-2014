@@ -16,6 +16,8 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+
+# cactus
 .build/error.html
 .build/index.html
 .build/posts/project-five.html
@@ -36,3 +38,6 @@ CVS
 .build/static/images/image-thumbnail@2x.jpg
 .build/static/js/main.js
 .build/static/images/neutyp.jpg
+.build/static/images/neutyp.gif
+.build/static/images/neutyp@2x.gif
+.build/static/images/neutyp@4x.gif
