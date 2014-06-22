@@ -67,25 +67,7 @@ function animate() {
       // move the meteors with velocity
       particle.x += particle.vx;
       particle.y += particle.vy;
-
-      // x coordinate
-      if (particle.x > window.innerWidth) {
-        particle.vx = -VELOCITY - Math.random();
-      }
-      else if (particle.x < 0) {
-        particle.vx = VELOCITY + Math.random();
-      }
-
-      // y coordinate
-      if (particle.y > window.innerHeight) {
-        particle.vy = -VELOCITY - Math.random();
-      }
-      else if (particle.y < 0) {
-        particle.vy = VELOCITY + Math.random();
-      }
-
     } 
-
     else {
       // make the stars fade back in after they fade out
       if (particle.alpha > .9 || particle.alpha <= 0) {
