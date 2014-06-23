@@ -8,7 +8,6 @@
     <h1>{% block title %}{{ block.super }}{% endblock title %}</h1>
   </header> <!--header-->
 
-  <a id="documentation" href="http://cactusformac.com/redirect/#documentation">Documentation</a>
 
   <section id="thumbnails" class="group">
     {% for post in posts %}
@@ -25,5 +24,4 @@
   {% endblock footer %}
 </section> <!--wrapper-->
 
-<a href="http://cactusformac.com/?utm_source=templates&utm_medium=badge&utm_campaign=portfolio-template"><img id="badge" class="2x" src="{% static '/images/badge.png' %}"/></a>
 {% endblock content %}
