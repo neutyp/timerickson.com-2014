@@ -11,11 +11,11 @@
   </header>
   
   <article class="post">
-  	<section class="post-body">
-  		{% block body %}
-  		This is where the post contents is.
-  		{% endblock body %}
-  	</section>
+    <section class="post-body">
+      {% block body %}
+      This is where the post contents is.
+      {% endblock body %}
+    </section>
   </article>
   
   <footer id="post-meta" class="group">
@@ -27,21 +27,21 @@
   
   <footer class="post-footer">
   <nav id="post-nav">
-  	<span class="prev">
-  		{% if prevPost %}
-  			<a href='/{{ prevPost.path }}'>
-  				<span class="arrow">&larr;</span> {{ prevPost.title }}
-  			</a>
-  		{% endif %}
-  	</span>
+    <span class="prev">
+      {% if prevPost %}
+        <a href='/{{ prevPost.path }}'>
+          <span class="arrow">&larr;</span> {{ prevPost.title }}
+        </a>
+      {% endif %}
+    </span>
   
-  	<span class="next">
-  		{% if nextPost %}
-  			<a href='/{{ nextPost.path }}'>
-  				{{ nextPost.title }} <span class="arrow">&rarr;</span>
-  			</a>
-  		{% endif %}
-  	</span>
+    <span class="next">
+      {% if nextPost %}
+        <a href='/{{ nextPost.path }}'>
+          {{ nextPost.title }} <span class="arrow">&rarr;</span>
+        </a>
+      {% endif %}
+    </span>
   </nav>
   </footer>
 
