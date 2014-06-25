@@ -1,26 +1,34 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
-  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/fancyzoom.css' %}">
 
-  {% block header %}
-  <title>{% block title %}Portfolio{% endblock %}</title>
-  {% endblock header %}
-  </head>
+    {% block header %}
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    {% endblock header %}
+    </head>
 
-<body>
-  {% block content %}
-  Main content
-  {% endblock content %}
+  <body>
+    {% block content %}
+    Main content
+    {% endblock content %}
 
-  {% block scripts %}
-  <script src="//code.jquery.com/jquery.min.js"></script>
-  <script src="{% static '/js/main.js' %}"></script>
-  {% endblock scripts %}
-</body>
+    {% block scripts %}
+    <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{% static '/js/jquery.fancyzoom.js' %}"></script>
+    <!-- <script src="{% static '/js/main.js' %}"></script> -->
+    <script>
+      $(document).ready(function() {
+        $("a.fancy").fancyZoom();
+      }); 
+    </script>
+    {% endblock scripts %}
+  </body>
 </html>

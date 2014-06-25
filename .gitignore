@@ -114,3 +114,8 @@ CVS
 .build/static/css/style.scss
 .build/static/images/neutyp-trans@4x.gif
 .build/static/images/mini_browser.png
+.build/static/css/fancyzoom.css
+.build/static/images/zoom/closebox.png
+.build/static/images/zoom/spin.png
+.build/static/js/jquery.fancyzoom.js
+.build/static/js/jquery.fancyzoom.min.js

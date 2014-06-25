@@ -5,12 +5,11 @@ date: 15-08-2013
 
 {% extends "post.html" %}
 {% block body %}
-{% filter markdown %}
 
-<img class="featured" src="{% static '/images/mini_browser.png' %}"/>
+<a class="fancy" href="{% static '/images/mini_browser.png' %}"><img class="featured" src="{% static '/images/mini_browser.png' %}"/></a>
 
+<p>
+  Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
+</p>
 
-Displays images in a grid, with individual pages optionally describing the image in detail, or displaying more images. Images have a max-width of 400 pixels by default.
-
-{% endfilter %}
 {% endblock body %}
