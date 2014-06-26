@@ -60,14 +60,25 @@ a.button {
 
 
 
-
 #wrapper {
-  padding: 100px 40px;
+  padding: 60px 40px;
   max-width: 880px;
   margin: 0 auto;
   @include clearfix;
 
+  @media screen and (max-width: 540px) {
+    padding: 20px 40px;
+  }
+  @media screen and (max-width: 440px) {
+    padding: 20px 20px 40px 20px;
+  }
+
   &.post { max-width: 880px; }
+
+  img#logo { 
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
 
   #header { 
     border-bottom: 1px solid #eee; 
@@ -80,13 +91,6 @@ a.button {
       text-align: center; 
       margin-bottom: 0;
     }
-  }
-
-  @media screen and (max-width: 540px) {
-    padding: 20px 40px;
-  }
-  @media screen and (max-width: 440px) {
-    padding: 20px 20px 40px 20px;
   }
 }
 
@@ -329,7 +333,6 @@ Post Page
       text-align: right;
 
       // font-size: 20px/1.8;
-      // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 20px;
       font-weight: 300;
       color: #aaa;

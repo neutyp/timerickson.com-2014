@@ -21,6 +21,10 @@
     <!-- <meta name="viewport" content="width=device-width"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    {% block header %}
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    {% endblock header %}
+
     <!-- Yay search engine stuff! Hire me Google -->
     <meta name="description" content="neutyp is the portfolio of Tim Erickson, a UI/UX designer in San Francisco, CA">
     <meta name="author" content="Tim Erickson">
@@ -40,14 +44,14 @@
 
     <!-- Yay iOS stuff! Hire me Apple -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="http://timerickson.com/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- <link rel="apple-touch-icon" href="http://timerickson.com/apple-touch-icon.png"> -->
 
     <!-- Chrome prefetching and prerendering stuff -->
-    <link rel="prerender" href="https://twitter.com/neutyp">
-    <link rel="prefetch" href="https://twitter.com/neutyp">
+    <link rel="prerender" href="https://timerickson.com/">
+    <link rel="prefetch" href="https://timerickson.com/">
     <link rel="canonical" href="http://neutyp.com/">
-    <link rel="sitemap" href="http://timerickson.com/sitemap.gz"><!-- or .xml ? -->
+    <link rel="sitemap" href="http://neutyp.com/sitemap.gz"><!-- or .xml ? -->
     <link rel="next" href="https://timerickson.com/">
     <link rel="prev" href="https://timerickson.com/">
 
@@ -56,10 +60,10 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <link rel="stylesheet" href="{% static '/css/fancyzoom.css' %}">
 
-    {% block header %}
-    <title>{% block title %}Portfolio{% endblock %}</title>
-    {% endblock header %}
-    </head>
+    <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  </head>
 
   <body>
     {% block content %}
@@ -67,10 +71,9 @@
     {% endblock content %}
 
     {% block scripts %}
-    <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
     <script src="{% static '/js/jquery.fancyzoom.js' %}"></script>
-    <!-- <script src="{% static '/js/main.js' %}"></script> -->
+    <script src="{% static '/js/main.js' %}"></script>
     <script>
       $(document).ready(function() {
         $('p > img').unwrap();
