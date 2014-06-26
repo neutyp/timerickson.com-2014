@@ -48,7 +48,7 @@ body {
   padding-bottom: 10px;
   @include clearfix;
 
-  font-size: 16px/1;
+  font-size: 14.4px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   -webkit-font-smoothing: antialiased;
@@ -87,9 +87,17 @@ a.button {
 
   &.post { max-width: 880px; }
 
-  img#logo { 
-    margin-top: 40px;
-    margin-bottom: 70px;
+  div#logo { 
+    display: block;
+    width: (576px/4); 
+    height: (168px/4);
+
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    background-image: url('/static/images/neutyp-alpha@2x.gif');
+    background-size: (576px/4) (168px/4);
+    background-repeat: no-repeat;
   }
 
   #header { 

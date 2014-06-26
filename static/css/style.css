@@ -25,7 +25,7 @@ html, body {
 body {
   position: relative;
   padding-bottom: 10px;
-  font-size: 16px/1;
+  font-size: 14.4px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   -webkit-font-smoothing: antialiased;
@@ -61,9 +61,15 @@ a.button {
       padding: 20px 20px 40px 20px; } }
   #wrapper.post {
     max-width: 880px; }
-  #wrapper img#logo {
-    margin-top: 40px;
-    margin-bottom: 70px; }
+  #wrapper div#logo {
+    display: block;
+    width: 144px;
+    height: 42px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    background-image: url("/static/images/neutyp-alpha@2x.gif");
+    background-size: 144px 42px;
+    background-repeat: no-repeat; }
   #wrapper #header {
     border-bottom: 1px solid #eee;
     margin-bottom: 20px; }

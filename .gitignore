@@ -128,3 +128,5 @@ CVS
 .build/static/js/retina.js
 .build/static/css/night.scss
 .build/static/images/neutyp-white@4x.gif
+.build/static/images/neutyp-alpha@2x.gif
+.build/static/images/neutyp-white@2x.gif

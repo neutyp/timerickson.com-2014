@@ -13,3 +13,6 @@ body {
 
 a, h1 {
   color: #fff; }
+
+#wrapper div#logo {
+  background-image: url("/static/images/neutyp-white@2x.gif"); }
