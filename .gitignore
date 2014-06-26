@@ -121,3 +121,5 @@ CVS
 .build/static/js/jquery.fancyzoom.min.js
 .build/static/images/zoom/closebox.psd
 .build/static/images/zoom/closebox@2x.png
+.build/static/css/fancyzoom.scss
+.build/static/images/mini_browser.jpg

@@ -2,37 +2,36 @@
   position: absolute;
   display: none;
   z-index: 499;
-
-  box-shadow: 0 0 4px rgba(0,0,0,0.7);
-}
+  margin-bottom: 50px;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: -o-zoom-out;
+  cursor: -ms-zoom-out;
+  cursor: zoom-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
 
 #zoom_img {
   display: block;
-  cursor: pointer;
   width: 100%;
   border: 0;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 #zoom_close {
   position: absolute;
   display: none;
   cursor: pointer;
-
-  left: -15px; top: -15px;
-  width: 30px; height: 30px;
-
+  left: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
   background: url(../images/zoom/closebox@2x.png) no-repeat;
-  background-size: 30px 30px;
-}
+  background-size: 30px 30px; }
 
 #zoom_spin {
   position: absolute;
   display: none;
   z-index: 525;
-
-  width: 50px; height: 50px;
-
-  background: url(../images/zoom/spin.png) no-repeat;
-}
+  width: 50px;
+  height: 50px;
+  background: url(../images/zoom/spin.png) no-repeat; }

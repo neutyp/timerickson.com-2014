@@ -14,11 +14,16 @@ html, body {
 
 body {
   position: relative;
+  padding-bottom: 10px;
   font-size: 16px/1;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 button,
 a.button {
@@ -210,6 +215,12 @@ Post Page
     width: 100%; }
     .post img + img {
       margin-top: -20px; }
+  .post a.fancy:hover {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: -o-zoom-in;
+    cursor: -ms-zoom-in;
+    cursor: zoom-in; }
 
 #post-meta {
   margin-bottom: 40px;

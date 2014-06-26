@@ -1,5 +1,14 @@
 @import 'bourbon/bourbon';
 
+// Quick cursor prefix mixin for non-supported cursors like grab, grabbing, zoom-in, zoom-out
+@mixin cursor($value) {
+  cursor: -webkit-#{$value};
+  cursor: -moz-#{$value};
+  cursor: -o-#{$value};
+  cursor: -ms-#{$value};
+  cursor: $value;
+}
+
 
 /*=========================================
 General Spacing
@@ -22,6 +31,9 @@ html, body { min-height: 100%; }
 
 body {
   position: relative;
+
+  padding-bottom: 10px;
+  @include clearfix;
 
   font-size: 16px/1;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -275,6 +287,10 @@ Post Page
     width: 100%;
 
     &+img { margin-top: -20px; }
+  }
+
+  a.fancy:hover {
+     @include cursor(zoom-in);
   }
 }
 
