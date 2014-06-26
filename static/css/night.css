@@ -1,0 +1,15 @@
+canvas {
+  visibility: visible;
+  /* night cycle! */ }
+
+body {
+  background-color: #0a0a0a;
+  color: #aaa; }
+
+#header,
+#post-meta,
+#post-nav {
+  border-color: #222 !important; }
+
+a, h1 {
+  color: #fff; }

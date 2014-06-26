@@ -123,3 +123,8 @@ CVS
 .build/static/images/zoom/closebox@2x.png
 .build/static/css/fancyzoom.scss
 .build/static/images/mini_browser.jpg
+.build/static/css/night.css
+.build/static/js/night.js
+.build/static/js/retina.js
+.build/static/css/night.scss
+.build/static/images/neutyp-white@4x.gif

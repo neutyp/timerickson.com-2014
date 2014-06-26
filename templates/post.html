@@ -1,49 +1,55 @@
 {% extends "index.html" %}
 {% block title %}{{ title }}{% endblock title %}
+
 {% block content %}
 
-<section id="wrapper" class="post group">
-  <header id="header">
-    <a href="/"><h1>Portfolio</h1></a>
-    {% block nav %}
-    {{ block.super }}
-    {% endblock nav %}
-  </header>
-  
-  <article class="post">
-    <section class="post-body">
-      {% block body %}
-      This is where the post contents is.
-      {% endblock body %}
-    </section>
-  </article>
-  
-  <footer id="post-meta" class="group">
-    <div class="date">{{ date|date:"M Y" }}</div>
-    {% if tags %}
-    <div><span>Tags</span> {{ tags }} </div>
-    {% endif %}
-  </footer> <!--post-meta-->
-  
-  <footer class="post-footer">
-  <nav id="post-nav">
-    <span class="prev">
-      {% if prevPost %}
-        <a href='/{{ prevPost.path }}'>
-          <span class="arrow">&larr;</span> {{ prevPost.title }}
-        </a>
-      {% endif %}
-    </span>
-  
-    <span class="next">
-      {% if nextPost %}
-        <a href='/{{ nextPost.path }}'>
-          {{ nextPost.title }} <span class="arrow">&rarr;</span>
-        </a>
-      {% endif %}
-    </span>
-  </nav>
-  </footer>
+  <canvas id="night" width="100%" height="100%">
+    <!-- Your browser does not support the Canvas element. -->
+  </canvas>
 
-</section> <!--wrapper-->
+  <section id="wrapper" class="post group">
+    <header id="header">
+      <a href="/"><h1>Portfolio</h1></a>
+      {% block nav %}
+      {{ block.super }}
+      {% endblock nav %}
+    </header>
+    
+    <article class="post">
+      <section class="post-body">
+        {% block body %}
+        This is where the post contents is.
+        {% endblock body %}
+      </section>
+    </article>
+    
+    <footer id="post-meta" class="group">
+      <div class="date">{{ date|date:"M Y" }}</div>
+      {% if tags %}
+      <div><span>Tags</span> {{ tags }} </div>
+      {% endif %}
+    </footer> <!--post-meta-->
+    
+    <footer class="post-footer">
+    <nav id="post-nav">
+      <span class="prev">
+        {% if prevPost %}
+          <a href='/{{ prevPost.path }}'>
+            <span class="arrow">&larr;</span> {{ prevPost.title }}
+          </a>
+        {% endif %}
+      </span>
+    
+      <span class="next">
+        {% if nextPost %}
+          <a href='/{{ nextPost.path }}'>
+            {{ nextPost.title }} <span class="arrow">&rarr;</span>
+          </a>
+        {% endif %}
+      </span>
+    </nav>
+    </footer>
+
+  </section> <!--wrapper-->
+
 {% endblock content %}

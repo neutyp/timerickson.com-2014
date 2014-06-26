@@ -7,8 +7,7 @@
   cursor: -moz-zoom-out;
   cursor: -o-zoom-out;
   cursor: -ms-zoom-out;
-  cursor: zoom-out;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
+  cursor: zoom-out; }
 
 #zoom_img {
   display: block;

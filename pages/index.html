@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+
+<canvas id="night" width="100%" height="100%">
+  <!-- Your browser does not support the Canvas element. -->
+</canvas>
+
 <section id="wrapper">
 
-  <img class="2x center" id="logo" width="144" height="42" src="{% static '/images/neutyp-alpha@4x.gif' %}"/>
+  <img class="2x center" id="logo" width="144" height="42" src="{% static '/images/neutyp-white@4x.gif' %}"/>
 
   <header id="header">
     <!-- <h1>{% block title %}{{ block.super }}{% endblock title %}</h1> -->
@@ -20,9 +25,10 @@
   
   {% block footer %}
   <footer id="footer">
-    <p class="small">A short description.</p>
+    <p class="small">A volcano is a mountain with hiccups.</p>
   </footer>
   {% endblock footer %}
+
 </section> <!--wrapper-->
 
 {% endblock content %}
