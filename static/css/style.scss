@@ -1,3 +1,4 @@
+@import 'reset.css';
 @import 'bourbon/bourbon';
 
 // Quick cursor prefix mixin for non-supported cursors like grab, grabbing, zoom-in, zoom-out
@@ -45,7 +46,6 @@ html, body { min-height: 100%; }
 body {
   position: relative;
 
-  padding-bottom: 10px;
   @include clearfix;
 
   font-size: 14.4px;
