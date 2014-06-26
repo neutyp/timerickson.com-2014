@@ -2,9 +2,10 @@
 General Spacing
 =========================================== */
 .center {
-  text-align: center;
-  margin: 0 auto;
-  display: block; }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
 
 /*=========================================
 Base
@@ -186,7 +187,7 @@ h2, h3, h4,
   margin-bottom: 6px;
   font-size: 13px;
   font-weight: 700;
-  color: #fff; }
+  color: #222; }
 
 h4,
 .h4 {

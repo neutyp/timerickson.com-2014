@@ -16,9 +16,10 @@ General Spacing
 
 
 .center {
-  text-align: center;
-  margin: 0 auto;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 
@@ -251,7 +252,8 @@ h2, h3, h4,
 
   font-size: 13px;
   font-weight: 700;
-  color: #fff;
+  // color: #fff;
+  color: #222;
 }
 
 h4,
