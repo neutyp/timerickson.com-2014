@@ -18,7 +18,7 @@
 
   $.fn.fancyZoom = function(settings) {
     var options = $.extend({
-      minBorder: 90
+      minBorder: 50
     }, settings);
 
     var fz = new FancyZoom(options);
@@ -157,21 +157,18 @@
         
         $zoom_img.attr("src", from.getAttribute("href"));
 
-        var endW = pImage.width;
-        var endH = pImage.height;
-        
-        var sizeRatio = endW / endH;
+        var endW = pImage.width / 2; // @2x retina
+        var endH = pImage.height / 2; // @2x retina
+
+        // var sizeRatio = endW / endH;
         if (endW > wGeometry.width - options.minBorder) {
           endW = wGeometry.width - options.minBorder;
-          endH = endW / sizeRatio;
+          // endH = endW / sizeRatio;
         }
-        if (endH > wGeometry.height - options.minBorder) {
-          endH = wGeometry.height - options.minBorder;
-          endW = endH * sizeRatio;
-        }
-        
-        var endTop = (wGeometry.height/2) - (endH/2) + wGeometry.scrollY;
+
+        var endTop = wGeometry.scrollY + options.minBorder;
         var endLeft = (wGeometry.width/2) - (endW/2) + wGeometry.scrollX;
+
 
         $zoom_close.hide();
         $zoom.hide().css({
@@ -183,10 +180,10 @@
         });
         
         $zoom.animate({
-          left    : endLeft + 'px',
-          top     : endTop + 'px',
+          left    : endLeft + "px",
+          top     : endTop + "px",
           width   : endW + "px",
-          height  : endH + "px",
+          height  : "auto",
           opacity : "show"
         }, 200, "easeInOutCubic", function() {
           $zoom_close.fadeIn();
