@@ -1,6 +1,5 @@
-canvas {
-  visibility: visible;
-  /* night cycle! */ }
+canvas#night {
+  visibility: visible; }
 
 body {
   background-color: #0a0a0a;
@@ -8,10 +7,15 @@ body {
 
 #header,
 #post-meta,
-#post-nav {
+#post-nav,
+#footer {
   border-color: #222 !important; }
 
-a, h1 {
+a,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
   color: #fff; }
 
 #wrapper div#logo {

@@ -48,7 +48,7 @@ body {
 
   @include clearfix;
 
-  font-size: 14.4px;
+  font-size: 15px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #777;
   -webkit-font-smoothing: antialiased;
@@ -192,6 +192,9 @@ img { max-width: 100%; }
 #footer { 
   @include clearfix;
   position: relative;
+
+  border-top: 1px solid #eee;
+  // box-shadow: inset 0 1px 0 #eee;
   
   // padding: 40px 0 0 0;
   margin-top: 100px; 
@@ -205,8 +208,6 @@ img { max-width: 100%; }
     text-align: center; 
     padding-bottom: 15px;
   }
-
-  box-shadow: inset 0 1px 0 #eee;
 
   p { float: left; }
 
@@ -240,8 +241,10 @@ ul, ol {
 
 
 /* Line Height */
-p,
-.post-body { 
+p { 
+  margin-top: 10px;
+  margin-bottom: 10px;
+
   line-height: 1.7; 
 
   small,
@@ -277,16 +280,18 @@ h1,
 
 h2, h3, h4,
 .h2, .h3, .h4 {
-  margin-bottom: 6px;
+  margin-bottom: 20px;
 
-  font-size: 13px;
   font-weight: 700;
   // color: #fff;
-  color: #222;
+  color: #444;
 }
 
 h4,
 .h4 {
+  margin-bottom: 6px;
+
+  font-size: 13px;
   color: #666;
 }
 
@@ -315,13 +320,19 @@ Post Page
     margin: 40px auto;
     position: relative;
     // max-width: 800px;
-    width: 100%;
+    max-width: 100%;
 
     &+img { margin-top: -20px; }
   }
 
   a.fancy:hover {
      @include cursor(zoom-in);
+  }
+
+  .post-body {
+    @include clearfix;
+
+    padding-top: 20px;
   }
 }
 
