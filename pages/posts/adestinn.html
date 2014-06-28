@@ -1,0 +1,21 @@
+title: Adestinn
+thumbnail: /static/images/image-thumbnail.jpg
+tags: Image
+date: 12-10-2013
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+Lead design at Adestinn in 2012. I can send you contact info for the CEO or the CTO… both would be happy to speak about me.
+
+Here are a few select designs I created while at Adestinn:
+
+<img src="http://f.cl.ly/items/3N3G2j220P2U0s2A2Q2f/Adestinn-(Prototype)-9-full.jpg" />
+<img src="http://f.cl.ly/items/1B411t3a3P2a1e351d0g/Adestinn-(Prototype)-5-full.jpg" />
+<img src="http://f.cl.ly/items/2w3x20400c1r3z0w3y2G/Adestinn-(Prototype)-21-full.jpg" />
+<!-- <img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/> -->
+
+
+{% endfilter %}
+{% endblock body %}
