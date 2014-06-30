@@ -62,7 +62,6 @@
 
     <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="{% static '/js/main.js' %}"></script>
 
   </head>
 
@@ -72,7 +71,7 @@
     {% endblock content %}
 
     {% block scripts %}
-    
+    <script src="{% static '/js/main.js' %}"></script>    
     <script src="{% static '/js/jquery.fancyzoom.js' %}"></script>
     <script src="{% static '/js/retina.js' %}"></script>
     <script src="{% static '/js/night.js' %}"></script>

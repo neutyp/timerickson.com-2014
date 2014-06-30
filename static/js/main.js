@@ -6,7 +6,8 @@ function getStylesheet() {
   var currentTime = new Date().getHours();
   if (currentTime <= 6 || currentTime >= 21) {
    document.write("<link rel='stylesheet' href='/static/css/night.css'>");
-   // document.getElementById("night").className = "active";
+   var canvas = document.getElementById("day");
+	 canvas.id = "night";
   }
 }
 
