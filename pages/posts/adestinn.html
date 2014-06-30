@@ -22,5 +22,31 @@ Here are a few select designs I created while at Adestinn:
 <!-- <img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/> -->
 
 
+I've compiled a few parts of my UX 'process' and will talk a bit about the thinking behind each piece. 
+
+* Here are some very early wireframes I built in the stages of testing "typical" travel checkout experiences. 
+http://tiny.ec/NvYE  
+
+You'll notice the main logged-in page has a 'quick form' to enter your arrival and departure destination, date, and etc. As I mentioned, this concept was removed because we learned that our audience primarily hadn't decided where they wanted to go yet. We needed to sell them on the destinations, then guide them through the booking process.
+
+* This example shows notes I wrote detailing the flow a user would take through the booking process. 
+http://tiny.ec/Nw7J
+
+This document changed over time as we tested the flow with various users leaving or exiting at any step (again, because users were usually in the 'dreaming' stage of booking their next spring break, they often would wait to book later, but we would save this information for later use eg. we learned that they have 2 kids, no need to enter that info again)
+
+* During the wireframing of the critical financial details section of 'checkout', I created a table and physically printed it out to test an accordion concept where rows would collapse or reveal based on user interaction. This simplified 15 rows into 5 and greatly improved retention and understanding of that page. 
+http://tiny.ec/NvPJ
+
+* I personally collected around 50 different 'receipts' while researching the UI for the checkout receipt. This included airline tickets, restaurant bills, health insurance forms, concert tickets, and more; to understand what worked and didn't work in representing monetary data in a simplistic fashion. Unfortunately, I do not have a photo of these, as its fairly difficult to photograph 50 objects without showing my personal information. 
+
+* Obsessing over the little details, I scoured our database of room descriptions and wrote a little script to replace word abbreviations into more human readable words: http://tiny.ec/NwRl
+
+* This example shows an in-process (unfinished) UI that was being tested against various ideas. Note the colors of the ribbons near the top of the page, we a/b tested red against purple to find which color was more emotionally calming while still saying "you're setting aside this much for a trip". Also note the accordion concept, and monetary data visualization, in this stage of testing. 
+http://tiny.ec/NwKa/o
+
+* Lastly, I did a number of pen and paper data visualization tests for Adestinn. The goal was to show how a user's monthly contributions would grow over time, using an interactive line graph. We decided in the end, after testing this UI concept, that the best UI would be incredibly straight forward. The user simply wanted to know if they would or would not have enough money by the time they left for their trip. If not, we calculated how much additionally (say, $4) they would need per month to meet their obligations. This straight-forward UI tested much better than the pretty and fun line graph. I also tested a pie graph to show the breakdown of the cost of the trip, but this UI overwhelmed the user when they realized how much was needed to pay for taxes and other fees. Often, simpler UI is better. 
+– Tim
+
+
 {% endfilter %}
 {% endblock body %}
