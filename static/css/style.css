@@ -83,6 +83,9 @@ a.button {
       #wrapper #header {
         text-align: center;
         margin-bottom: 0; } }
+    #wrapper #header #head-nav {
+      line-height: 1.7;
+      margin-bottom: 10px; }
 
 img {
   max-width: 100%; }
@@ -177,10 +180,10 @@ ul, ol {
     list-style-type: circle;
     list-style-position: inside; }
 
-/* Line Height */
 p {
   margin-top: 10px;
   margin-bottom: 10px;
+  /* Line Height */
   line-height: 1.7; }
   p small, p.small {
     display: block;
@@ -299,23 +302,43 @@ Post Navigation
   font-size: 13px;
   font-weight: 500;
   border-top: 1px solid #eee; }
-  #post-nav span {
+
+#post-nav:after,
+#head-nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+#post-nav span,
+#head-nav span {
+  position: relative;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear; }
+  #post-nav span.prev:after, #post-nav span.next:after,
+  #head-nav span.prev:after,
+  #head-nav span.next:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #post-nav span.prev,
+  #head-nav span.prev {
+    float: left; }
+  #post-nav span.next,
+  #head-nav span.next {
+    float: right; }
+  #post-nav span.prev:hover,
+  #head-nav span.prev:hover {
+    left: -3px; }
+  #post-nav span.next:hover,
+  #head-nav span.next:hover {
+    right: -3px; }
+  #post-nav span.prev:hover .arrow,
+  #head-nav span.prev:hover .arrow {
+    left: -4px; }
+  #post-nav span.next:hover .arrow,
+  #head-nav span.next:hover .arrow {
+    right: -4px; }
+  #post-nav span .arrow,
+  #head-nav span .arrow {
     position: relative;
-    -webkit-transition: all 0.1s linear;
-    -moz-transition: all 0.1s linear;
-    transition: all 0.1s linear; }
-    #post-nav span.prev {
-      float: left; }
-    #post-nav span.next {
-      float: right; }
-    #post-nav span.prev:hover {
-      left: -3px; }
-    #post-nav span.next:hover {
-      right: -3px; }
-    #post-nav span.prev:hover .arrow {
-      left: -4px; }
-    #post-nav span.next:hover .arrow {
-      right: -4px; }
-    #post-nav span .arrow {
-      position: relative;
-      padding: 1px; }
+    padding: 1px; }

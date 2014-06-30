@@ -115,6 +115,11 @@ a.button {
       text-align: center; 
       margin-bottom: 0;
     }
+
+    #head-nav {
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -243,12 +248,11 @@ ul, ol {
 }
 
 
-
-/* Line Height */
 p { 
   margin-top: 10px;
   margin-bottom: 10px;
 
+  /* Line Height */
   line-height: 1.7; 
 
   small,
@@ -414,10 +418,21 @@ Post Navigation
   font-weight: 500;
 
   border-top: 1px solid #eee;
+}
+
+#post-nav,
+#head-nav {
+  @include clearfix;
+  // 
 
   span {
     position: relative;
     @include transition (all 0.1s linear);
+
+    &.prev,
+    &.next {
+      @include clearfix;
+    }
 
     &.prev { float:  left; }
     &.next { float: right; }
@@ -434,4 +449,6 @@ Post Navigation
     }
   }
 }
+
+
 

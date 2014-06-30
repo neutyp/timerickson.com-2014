@@ -10,7 +10,15 @@
   <section id="wrapper" class="post group">
     <header id="header">
       <div id="logo" class="center"></div>
-      <a href="/"><h2><span class="arrow">&larr;</span> All projects</h2></a>
+
+      <nav id="head-nav">
+        <span class="prev">
+          <a href='/'>
+            <span class="arrow">&larr;</span> All projects
+          </a>
+        </span>
+      </nav>
+
       {% block nav %}
       {{ block.super }}
       {% endblock nav %}
