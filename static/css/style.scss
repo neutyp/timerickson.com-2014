@@ -78,7 +78,7 @@ a.button {
 
 #wrapper {
   padding: 60px 40px;
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
   @include clearfix;
 
@@ -136,6 +136,9 @@ img { max-width: 100%; }
     position: relative;
     width: 49%;
     float: left;
+
+    max-width: 400px;
+    max-height: 300px;
 
     margin-right: 2%;
     margin-top: 2%;
