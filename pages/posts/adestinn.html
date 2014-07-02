@@ -7,70 +7,52 @@ date: 12-12-2012
 {% block body %}
 
 <p>
-  Working with a small team, I lead all aspects of design and helped shape, architect the user interface and experience of the service. I conducted the entire stack of design, from in-person user research through wireframing to pixel-pushing design and execution in HTML/CSS. 
+  Working with a small team, I lead all aspects of design and helped shape, architect the user interface and experience of the service. I conducted the entire stack of design, from in-person user research through wireframing to pixel-pushing design and execution in HTML/CSS. <!-- I also outlined Adestinn's social media goals and wrote strategies to grow the company's social footprint. -->
 </p>
 
-<p>
-  I also outlined Adestinn's social media goals and wrote strategies to grow the company's social footprint.
-</p>
-
-<!-- Lead design at Adestinn in 2012. I can send you contact info for the CEO or the CTO… both would be happy to speak about me. -->
-
-<!-- Here are a few select designs I created while at Adestinn: -->
-
-<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser.png' %}" /></a>  
-
-<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-2@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-2.png' %}" /></a>  
-
-<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-3@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-3.png' %}" /></a>  
-
-<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-4@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-4.png' %}" /></a>  
-
+<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-5@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-5.png' %}" /></a>
 
 <p>
-  I've compiled a few parts of my UX process and will talk a bit about the thinking behind each piece. Here are some very early wireframes I built in the stages of testing "typical" travel checkout experiences. 
+  Adestinn is a vacation savings plan and hotel booking service. Offered as an employee benefit through large employers, Adestinn matches funds added to the user's account by 50%. The first, early wireframes I created resembled "typical" travel website checkout experiences.
 </p>
 
 <p class="center">
-  <a href="//tiny.ec/NvYE" class="button">View PDF file <span class="arrow">&rarr;</span></a>
+  <a href="//tiny.ec/NvYE" class="button">View early wireframes (PDF) <span class="arrow">&rarr;</span></a>
 </p>
 
 <p>
-  You'll notice the main logged-in page has a 'quick form' to enter your arrival and departure destination, date, and etc. This concept was removed because we learned that our audience primarily hadn't decided where they wanted to go yet. We needed to sell them on the destinations, then guide them through the booking process.
+  <br />
+  We quickly realized that a service built around gradual saving should emphasize trust and exclusivity, not quick sales. Through research, we found our target market (middle aged mothers) were typically saving up for "next year's vacation" and didn't neccessarily know where they wanted to travel to yet. We needed to sell them on the destinations long before guide them through the booking process.
+</p>
+
+<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-2@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-2.png' %}" /></a>
+
+<p>
+  We heavily tested the site's user flows with real people, identifying their behaviours as they fell off at various steps (again, because users were usually in the &lsquo;dreaming&rsquo; stage of booking their next spring break, they often would wait to book later.) We began to analyze user traffic to determine a likely outcome (eg. always viewing beach locations) and suggested those results when they were closer to booking the trip.
+</p>
+
+<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser.png' %}" /></a>
+
+<p>
+  During the wireframing of the critical financial details section of &lsquo;checkout&rsquo;, I created a table and physically printed it out to test an accordion concept where rows would collapse or reveal based on user interaction. This simplified 15 rows into 5 and greatly improved user understanding of a critical page.  Note the colors of the ribbons near the top of the page, we A/B tested red against purple to find which color was more emotionally calming while still saying "you're going to spend this much for a vacation". <!-- Also note the accordion concept, and monetary data visualization, in this stage of testing.  -->
+</p>
+
+<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-6@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-6.png' %}" /></a>
+<!-- <img alt="Adestinn-(Prototype)-25.jpg" src="http://tiny.ec/NwKa/Adestinn-(Prototype)-25.jpg" /> -->
+
+<p>
+  I also personally collected around 50 different 'receipts' while researching the UI for the checkout receipt. This included airline tickets, restaurant bills, health insurance forms, concert tickets, and more; to understand what worked and didn't work in representing monetary data in a simplistic fashion. 
+</p>
+
+<a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-3@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-3.png' %}" /></a>
+<!-- <a class="fancy" href="{% static '/images/posts/adestinn/mini_browser-4@2x.png' %}"><img class="featured 2x" src="{% static '/images/posts/adestinn/mini_browser-4.png' %}" /></a> -->
+
+<p>
+  Lastly, I did a number of pen and paper data visualization tests. The goal was to show how a user's monthly contributions would grow over time, using an interactive line graph. We decided in the end that the best UI would be incredibly straight forward. The user simply wanted to know if they would or would not have enough money by the time they left for their trip. If not, we calculated how much additionally (say, $4) they would need per month to meet their obligations. 
 </p>
 
 <p>
-  This example shows notes I wrote detailing the flow a user would take through the booking process. 
-</p>
-
-<p class="center">
-  <a href="//tiny.ec/Nw7J" class="button">View PDF file <span class="arrow">&rarr;</span></a>
-</p>
-
-<p>
-  This document changed over time as we tested the flow with various users leaving or exiting at any step (again, because users were usually in the 'dreaming' stage of booking their next spring break, they often would wait to book later, but we would save this information for later use eg. we learned that they have 2 kids, no need to enter that info again)
-</p>
-
-<p>
-  During the wireframing of the critical financial details section of 'checkout', I created a table and physically printed it out to test an accordion concept where rows would collapse or reveal based on user interaction. This simplified 15 rows into 5 and greatly improved retention and understanding of that page. 
-  http://tiny.ec/NvPJ
-</p>
-
-<p>
-  I personally collected around 50 different 'receipts' while researching the UI for the checkout receipt. This included airline tickets, restaurant bills, health insurance forms, concert tickets, and more; to understand what worked and didn't work in representing monetary data in a simplistic fashion. Unfortunately, I do not have a photo of these, as its fairly difficult to photograph 50 objects without showing my personal information. 
-</p>
-
-<p>
-  Obsessing over the little details, I scoured our database of room descriptions and wrote a little script to replace word abbreviations into more human readable words: http://tiny.ec/NwRl
-</p>
-
-<p>
-  This example shows an in-process (unfinished) UI that was being tested against various ideas. Note the colors of the ribbons near the top of the page, we a/b tested red against purple to find which color was more emotionally calming while still saying "you're setting aside this much for a trip". Also note the accordion concept, and monetary data visualization, in this stage of testing. 
-  http://tiny.ec/NwKa/o
-</p>
-
-<p>
-  Lastly, I did a number of pen and paper data visualization tests for Adestinn. The goal was to show how a user's monthly contributions would grow over time, using an interactive line graph. We decided in the end, after testing this UI concept, that the best UI would be incredibly straight forward. The user simply wanted to know if they would or would not have enough money by the time they left for their trip. If not, we calculated how much additionally (say, $4) they would need per month to meet their obligations. This straight-forward UI tested much better than the pretty and fun line graph. I also tested a pie graph to show the breakdown of the cost of the trip, but this UI overwhelmed the user when they realized how much was needed to pay for taxes and other fees. Often, simpler UI is better. 
+  This straight-forward UI tested much better than the pretty and fun line graph. I also tested a pie graph to show the breakdown of the cost of the trip, but this UI overwhelmed the user when they realized how much was needed to pay for taxes and other fees. Often, simpler UI is better. 
 </p>
 
 {% endblock body %}
