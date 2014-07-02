@@ -30,17 +30,18 @@
     });
     
     function elementGeometry(elemFind) {
-      if (elemFind.childNodes.length > 0) {
-        elemFind = elemFind.childNodes[0];
-      }
-
       var $elemFind = $(elemFind);
+
+      if ($elemFind.children().length > 0) {
+        $elemFind = $elemFind.children(":first");
+      }
       var elemX = $elemFind.offset().left;
       var elemY = $elemFind.offset().top;
       var elemW = $elemFind.width() || 50;
       var elemH = $elemFind.height() || 12;
+      var elemR = $elemFind.hasClass("2x");
 
-      return { left: elemX, top: elemY, width: elemW, height: elemH };
+      return { left: elemX, top: elemY, width: elemW, height: elemH, retina: elemR };
     }
 
     function windowGeometry() {
@@ -157,8 +158,13 @@
         
         $zoom_img.attr("src", from.getAttribute("href"));
 
-        var endW = pImage.width / 2; // @2x retina
-        var endH = pImage.height / 2; // @2x retina
+        var endW = pImage.width;
+        var endH = pImage.height;
+
+        if (eGeometry.retina == true) {
+          var endW = pImage.width / 2; // @2x retina
+          var endH = pImage.height / 2; // @2x retina
+        }
 
         // var sizeRatio = endW / endH;
         if (endW > wGeometry.width - options.minBorder) {
