@@ -39,6 +39,12 @@ canvas {
   display: none;
 }
 
+span.reverse,
+a.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
 
 /*=========================================
 Base
@@ -107,6 +113,10 @@ a.button {
   #header { 
     border-bottom: 1px solid #eee; 
     margin-bottom: 20px;
+
+    p {
+      line-height: 2;
+    }
 
     @media screen and (max-width: 540px) {
       margin-bottom: 40px;
