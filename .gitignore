@@ -46,3 +46,4 @@ CVS
 .deploy/static/js/main.js
 .deploy/static/js/night.js
 .deploy/static/js/retina.js
+.build/static/js/retina.js
