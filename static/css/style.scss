@@ -1,3 +1,7 @@
+/*=========================================
+ONLY EDIT FROM SCSS
+=========================================== */
+
 @import 'reset.css';
 @import 'bourbon/bourbon';
 
@@ -31,7 +35,7 @@ canvas {
   margin-left:  auto;
   margin-right: auto;
 
-  // 
+  //
   text-align: center;
 }
 
@@ -72,11 +76,11 @@ a.button {
   padding: 8px 12px;
 
   color: #fff;
-  font-size: 13px; 
-  font-weight: bold; 
+  font-size: 13px;
+  font-weight: bold;
   line-height: 1.4;
 
-  background: #5badf0; 
+  background: #5badf0;
   border-radius: 3px;
 }
 
@@ -97,9 +101,9 @@ a.button {
 
   &.post { max-width: 880px; }
 
-  div#logo { 
+  div#logo {
     display: block;
-    width: (576px/4); 
+    width: (576px/4);
     height: (168px/4);
 
     margin-top: 30px;
@@ -110,8 +114,8 @@ a.button {
     background-repeat: no-repeat;
   }
 
-  #header { 
-    border-bottom: 1px solid #eee; 
+  #header {
+    border-bottom: 1px solid #eee;
     margin-bottom: 20px;
 
     p {
@@ -122,7 +126,7 @@ a.button {
       margin-bottom: 40px;
     }
     @media screen and (max-width: 440px) {
-      text-align: center; 
+      text-align: center;
       margin-bottom: 0;
     }
 
@@ -153,7 +157,7 @@ img { max-width: 100%; }
     margin-right: 2%;
     margin-top: 2%;
 
-    &:nth-child(1), 
+    &:nth-child(1),
     &:nth-child(2) {
       margin-top: 0;
     }
@@ -177,7 +181,7 @@ img { max-width: 100%; }
       }
     }
 
-    &, 
+    &,
     span {
       @include transition (all 0.2s ease);
     }
@@ -211,13 +215,13 @@ img { max-width: 100%; }
 }
 
 
-#footer { 
+#footer {
   @include clearfix;
   position: relative;
 
   border-top: 1px solid #eee;
-  
-  margin-top: 60px; 
+
+  margin-top: 60px;
   padding-top: 20px;
 
   @media screen and (max-width: 540px) {
@@ -225,7 +229,7 @@ img { max-width: 100%; }
     padding-bottom: 20px;
   }
   @media screen and (max-width: 440px) {
-    text-align: center; 
+    text-align: center;
     padding-bottom: 15px;
   }
 
@@ -243,28 +247,28 @@ Typography
 
 // Accent color
 a {
-  text-decoration: none; 
+  text-decoration: none;
   color: #5694f1;
   @include transition (all 0.2s ease);
 }
 
-ul, ol { 
-  margin: 0; 
-  padding: 0; 
+ul, ol {
+  margin: 0;
+  padding: 0;
 
-  li { 
-    list-style-type: circle; 
-    list-style-position: inside; 
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
   }
 }
 
 
-p { 
+p {
   margin-top: 10px;
   margin-bottom: 10px;
 
   /* Line Height */
-  line-height: 1.7; 
+  line-height: 1.7;
 
   small,
   &.small {
@@ -389,7 +393,7 @@ Post Page
 
       // font-size: 20px/1.8;
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 400;
       color: #aaa;
     }
   }
@@ -434,7 +438,7 @@ Post Navigation
 #post-nav,
 #head-nav {
   @include clearfix;
-  // 
+  //
 
   span {
     position: relative;
@@ -460,6 +464,3 @@ Post Navigation
     }
   }
 }
-
-
-

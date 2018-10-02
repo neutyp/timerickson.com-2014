@@ -19,7 +19,7 @@ canvas {
 	overflow: hidden;
 }
 
-#wrapper {
+#wrapper-slim {
 	padding: 100px 40px;
 	max-width: 500px;
 	margin: 0 auto;
@@ -62,12 +62,14 @@ h1 {
 	font-weight: 400;
 	font-size: 20px;
 	color: #222;
+
+	display: block;
 }
 
 h2 {
 	font-size: 20px;
-	font-weight: 300;
-	color: #aaa; 
+	font-weight: 400;
+	color: #aaa;
 	margin-top: 10px;
 }
 

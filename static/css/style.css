@@ -1,3 +1,6 @@
+/*=========================================
+ONLY EDIT FROM SCSS
+=========================================== */
 @import url(reset.css);
 /*=========================================
 General Spacing
@@ -286,7 +289,7 @@ Post Page
       float: right;
       text-align: right;
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 400;
       color: #aaa; }
 
 #sharing {
@@ -351,3 +354,5 @@ Post Navigation
   #head-nav span .arrow {
     position: relative;
     padding: 1px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<canvas id="night" width="100%" height="100%">
+<canvas id="day" width="100%" height="100%">
   <!-- Your browser does not support the Canvas element. -->
 </canvas>
 
-<section id="wrapper">
+<section id="wrapper-slim">
 
   <header id="header">
-    <img id="avatar" class="2x" src="{% static '/images/avatar@4x.jpg' %}"/>
+    <img id="avatar" class="2x" src="{% static '/images/avatar.jpg' %}"/>
       <h1>{% block title %}Tim Erickson{% endblock title %}</h1>
     <h2>I create digital things.</h2>
   </header> <!--header-->
