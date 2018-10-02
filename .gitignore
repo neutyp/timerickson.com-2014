@@ -18,32 +18,5 @@ xcuserdata
 CVS
 
 # cactus
-*.build
-*.deploy
-.build/error.html
-.build/index.html
-.build/static/css/main.css
-.build/static/css/day.css
-.build/static/css/night.css
-.build/static/css/reset.css
-.build/static/css/style.css
-.build/static/images/avatar@4x.jpg
-.build/static/js/main.js
-.build/static/js/night.js
-.deploy/error.html
-.deploy/index.html
-.deploy/robots.txt
-.deploy/sitemap.xml
-.deploy/static/css/day.css
-.deploy/static/css/main.css
-.deploy/static/css/night.css
-.deploy/static/css/reset.css
-.deploy/static/images/avatar.jpg
-.deploy/static/images/avatar@4x.jpg
-.deploy/static/images/badge.png
-.deploy/static/images/badge@2x.png
-.deploy/static/images/favicon.ico
-.deploy/static/js/main.js
-.deploy/static/js/night.js
-.deploy/static/js/retina.js
-.build/static/js/retina.js
+.build/**
+.deploy/**

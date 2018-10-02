@@ -1,0 +1,45 @@
+title: Introducing BrowserTap
+thumbnail: /static/images/posts/browsertap/thumb.jpg
+tags: HTML/CSS, UI/UX, Video, Animation
+date: 17-01-2013
+
+{% extends "post.html" %}
+{% block body %}
+
+<h2 class="center">{{ title }}</h2>
+<br />
+<p>
+  BrowserTap is fast and interactive cross-browser testing. Concepted and built in 48 hours at <a href="//vimeo.com/52971155">Startup Weekend Twin Cities 4</a>, BrowserTap <a href="//tech.mn/news/2012/11/08/techdotmn-swtc4-browser-tap/">took 2nd place</a> and won the curiosity of countless front-end developers. Featuring an impressive set of realtime technologies, BrowserTap allows you to test any rendering engine (say, Internet Explorer) in your favorite browser (say, Chrome). 
+</p>
+
+<p>
+  Built in collaboration with Craig Condon, BrowserTap launched as a limited alpha in January, 2013. The site spread virally via Twitter, a few forums, and <a href="http://minnov8.com/2013/01/17/spiceapps-browsertap/">blogs</a>, reaching 2,000 signup in the first week. 
+</p>
+
+<p class="center">
+  <br />
+  <a href="//browsertap.com/" class="button">View the live site and video <span class="arrow">&rarr;</span></a>
+</p>
+
+<a class="fancy" href="{% static '/images/posts/browsertap/website@2x.png' %}">
+  <img class="featured 2x" src="{% static '/images/posts/browsertap/website.png' %}" />
+</a>
+
+<p>
+  When approaching the design philosophy for BrowserTap, I quickly realized the most effective approach would be as little design as possible. Hiding nothing behind a GUI or set of menus, we translated all native actions on your local machine to actions in the cloud browser. This allows the user to have direct, instant control of otherwise tedious cross-browser testing setups (such as VMs, screenshot services or dedicated testing computers). 
+</p>
+
+<a class="fancy" href="{% static '/images/posts/browsertap/mini_browser-9@2x.png' %}">
+  <img class="featured 2x" src="{% static '/images/posts/browsertap/mini_browser-9.png' %}" />
+</a>
+
+<p>
+  All visual design, interaction design as well as the marketing design, video production, animation and HTML/CSS was created by myself. Craig built the core of BrowserTap, allowing your local browser to communicate with a browser running on in the cloud, in realtime. 
+</p>
+
+<a class="fancy" href="{% static '/images/posts/browsertap/mini_browser-8@2x.png' %}">
+  <img class="featured 2x" src="{% static '/images/posts/browsertap/mini_browser-8.png' %}" />
+</a>
+
+
+{% endblock body %}

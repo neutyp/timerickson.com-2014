@@ -1,0 +1,22 @@
+title: Cliqly
+thumbnail: /static/images/image-thumbnail.jpg
+tags: Image
+date: 21-03-2011
+
+{% extends "post.html" %}
+{% block body %}
+{% filter markdown %}
+
+2011 – Cliqly – niche social curation
+Got some press before release date. Created before Pinterest really took off, or had visibility. Died due to lack of user traction.
+
+![Cliqly](http://f.cl.ly/items/2L0j0S103B1w0l1N3A1v/Cliqly.jpg "Cliqly")  
+
+[http://blog.louisgray.com/2011/03/coming-soon-cliqly-visual-interface.html](http://blog.louisgray.com/2011/03/coming-soon-cliqly-visual-interface.html "Louis Gray")  
+[http://jamespoling.com/cliq-ly-launches-graphical-content-curation/](http://jamespoling.com/cliq-ly-launches-graphical-content-curation/ "James Poling")  
+
+<!-- <img class="featured 2x" src="{% static '/images/image-full.jpg' %}"/> -->
+
+
+{% endfilter %}
+{% endblock body %}

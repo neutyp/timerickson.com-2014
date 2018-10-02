@@ -1,0 +1,465 @@
+@import 'reset.css';
+@import 'bourbon/bourbon';
+
+// Quick cursor prefix mixin for non-supported cursors like grab, grabbing, zoom-in, zoom-out
+@mixin cursor($value) {
+  cursor: -webkit-#{$value};
+  cursor: -moz-#{$value};
+  cursor: -o-#{$value};
+  cursor: -ms-#{$value};
+  cursor: $value;
+}
+
+
+/*=========================================
+General Spacing
+=========================================== */
+
+canvas {
+  visibility: hidden; /* default for day cycle */
+  position: fixed;
+  z-index: -1;
+
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+
+.center {
+  display: block;
+  margin-left:  auto;
+  margin-right: auto;
+
+  // 
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+span.reverse,
+a.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+
+/*=========================================
+Base
+=========================================== */
+
+
+html, body { min-height: 100%; }
+
+body {
+  position: relative;
+
+  @include clearfix;
+
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+button,
+a.button {
+  padding: 8px 12px;
+
+  color: #fff;
+  font-size: 13px; 
+  font-weight: bold; 
+  line-height: 1.4;
+
+  background: #5badf0; 
+  border-radius: 3px;
+}
+
+
+
+#wrapper {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  @include clearfix;
+
+  @media screen and (max-width: 540px) {
+    padding: 20px 40px;
+  }
+  @media screen and (max-width: 440px) {
+    padding: 20px 20px 40px 20px;
+  }
+
+  &.post { max-width: 880px; }
+
+  div#logo { 
+    display: block;
+    width: (576px/4); 
+    height: (168px/4);
+
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    background-image: url('/static/images/neutyp-alpha@2x.gif');
+    background-size: (576px/4) (168px/4);
+    background-repeat: no-repeat;
+  }
+
+  #header { 
+    border-bottom: 1px solid #eee; 
+    margin-bottom: 20px;
+
+    p {
+      line-height: 2;
+    }
+
+    @media screen and (max-width: 540px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 440px) {
+      text-align: center; 
+      margin-bottom: 0;
+    }
+
+    #head-nav {
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+img { max-width: 100%; }
+
+#thumbnails {
+  @include clearfix;
+  margin: 60px auto 0 auto;
+  text-align: center;
+
+  a {
+    @include clearfix;
+    position: relative;
+    width: 49%;
+    float: left;
+
+    max-width: 400px;
+    max-height: 300px;
+
+    margin-right: 2%;
+    margin-top: 2%;
+
+    &:nth-child(1), 
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(n) {
+      @media screen and (max-width: 440px) {
+        display: inline-block;
+        float: none;
+
+        width:     100%;
+        max-width: 300px;
+
+        margin: 20px auto 0 auto;
+      }
+    }
+    &:first-child {
+      @media screen and (max-width: 440px) {
+        margin-top: 0;
+      }
+    }
+
+    &, 
+    span {
+      @include transition (all 0.2s ease);
+    }
+
+    img {
+      display: block;
+      background-color: #fff;
+      width: 100%;
+      height: auto;
+    }
+
+    span {
+      // display: inline-block;
+      display: none;
+      margin: 20px 0;
+
+      font-size: 15px;
+      font-weight: 400;
+      color: #999;
+    }
+
+    &:hover {
+      opacity: 0.85;
+
+      span {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+#footer { 
+  @include clearfix;
+  position: relative;
+
+  border-top: 1px solid #eee;
+  
+  margin-top: 60px; 
+  padding-top: 20px;
+
+  @media screen and (max-width: 540px) {
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 440px) {
+    text-align: center; 
+    padding-bottom: 15px;
+  }
+
+  p { float: left; }
+
+}
+
+
+
+/*=========================================
+Typography
+=========================================== */
+
+
+
+// Accent color
+a {
+  text-decoration: none; 
+  color: #5694f1;
+  @include transition (all 0.2s ease);
+}
+
+ul, ol { 
+  margin: 0; 
+  padding: 0; 
+
+  li { 
+    list-style-type: circle; 
+    list-style-position: inside; 
+  }
+}
+
+
+p { 
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  /* Line Height */
+  line-height: 1.7; 
+
+  small,
+  &.small {
+    display: block;
+
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.5
+  }
+
+  &.lead {
+    font-size: 18px;
+    color: #000;
+  }
+}
+
+h1,
+.h1 {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 20px;
+
+  line-height: 100%;
+  font-size: 19px;
+  font-weight: 500;
+  color: #222;
+
+  @media screen and (max-width: 540px) {
+    font-size: 17px;
+  }
+}
+
+h2, h3, h4,
+.h2, .h3, .h4 {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  // color: #fff;
+  color: #444;
+}
+
+h4,
+.h4 {
+  margin-bottom: 6px;
+
+  font-size: 13px;
+  color: #666;
+}
+
+
+/*=========================================
+Post Page
+=========================================== */
+
+
+.post {
+  @include clearfix;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 440px) {
+    margin-bottom: 40px;
+  }
+
+  p, ul {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  p { margin-bottom: 20px; }
+
+  img {
+    margin: 40px auto;
+    position: relative;
+    // max-width: 800px;
+    max-width: 100%;
+
+    &+img { margin-top: -20px; }
+  }
+
+  a.fancy:hover {
+     @include cursor(zoom-in);
+  }
+
+  .post-body {
+    @include clearfix;
+
+    padding-top: 20px;
+  }
+}
+
+#post-meta {
+  margin-bottom: 40px;
+  padding-top: 40px;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  // color: #aaa;
+  color: #444;
+
+  border-top: 1px solid #eee;
+
+  div {
+    display: inline-block;
+
+    span {
+      display: block;
+      margin-bottom: 2px;
+
+      // color: #666;
+      // color: #333;
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    &.date {
+      position: relative;
+      top: 1px;
+      float: right;
+
+      text-align: right;
+
+      // font-size: 20px/1.8;
+      font-size: 20px;
+      font-weight: 300;
+      color: #aaa;
+    }
+  }
+}
+
+
+#sharing {
+  float: right;
+  margin: -2px;
+
+  a {
+    display: inline-block;
+    margin-left: 2px;
+    margin-top: 4px;
+
+    vertical-align: middle;
+
+    // font-size: 20px;
+    font-size: 23px;
+    color: #d4d4d4;
+
+    &:hover {
+      color: #444;
+    }
+  }
+}
+
+/*=========================================
+Post Navigation
+=========================================== */
+
+#post-nav {
+  padding-top: 20px;
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  border-top: 1px solid #eee;
+}
+
+#post-nav,
+#head-nav {
+  @include clearfix;
+  // 
+
+  span {
+    position: relative;
+    @include transition (all 0.1s linear);
+
+    &.prev,
+    &.next {
+      @include clearfix;
+    }
+
+    &.prev { float:  left; }
+    &.next { float: right; }
+
+    &.prev:hover        { left:  -3px; }
+    &.next:hover        { right: -3px; }
+
+    &.prev:hover .arrow { left:  -4px; }
+    &.next:hover .arrow { right: -4px; }
+
+    .arrow {
+      position: relative;
+      padding: 1px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,28 @@
+title: Team Digest
+thumbnail: /static/images/posts/teamdigest/thumb.jpg
+tags: UI/UX, Design, HTML/CSS
+date: 12-02-2012
+
+{% extends "post.html" %}
+{% block body %}
+
+<h2 class="center">{{ title }}</h2>
+<br />
+<p>
+  Team Digest was a <a href="//spiceapps.com/">Spice Apps</a> project built in early 2012 in collaboration with <a href="//github.com/crcn">Craig Condon</a>. Team Digest allowed people to easily create email digests (or briefs) with curated articles and content. It was designed for anyone that ran an email list or wanted to share content with coworkers, fans, or any group of people.
+</p>
+
+<p>
+  We presented an early version at <a href="//tech.mn/news/2012/01/18/minnedemo-winter-2012-livestream/">MinneDemo Winter 2012</a> and recieved a lot of <a href="http://tech.mn/news/2012/01/18/beta-byte-team-digest/">interest</a>, but ultimately failed to gain significant user traction, or interest from enterprise organizations. All visual design, email design, and HTML/CSS was my work.
+</p>
+
+<a class="fancy" href="{% static '/images/posts/teamdigest/mini_browser@1x.png' %}">
+  <img class="featured" src="{% static '/images/posts/teamdigest/mini_browser@1x.png' %}" />
+</a>
+
+<a class="fancy" href="{% static '/images/posts/teamdigest/mini_browser-2@1x.png' %}">
+  <img class="featured" src="{% static '/images/posts/teamdigest/mini_browser-2@1x.png' %}" />
+</a>
+
+
+{% endblock body %}
