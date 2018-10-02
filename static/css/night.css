@@ -1,4 +1,4 @@
-canvas {
+canvas, canvas#night {
 	visibility: visible;
 	/* night cycle! */
 }
@@ -9,8 +9,29 @@ body {
 }
 
 #header {
-	
+
 	border-bottom-color: #222;
 }
 
 a, h1 { color: #fff; }
+
+
+
+#header,
+#post-meta,
+#post-nav,
+#footer {
+  border-color: #222 !important;
+}
+
+a,
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  color: #fff;
+}
+
+#wrapper div#logo {
+  background-image: url("/static/images/neutyp-white@2x.gif");
+}
