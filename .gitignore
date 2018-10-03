@@ -3,6 +3,6 @@
 profile
 
 # cactus
-.build/**
-.deploy/**
+.build/*
+.deploy/*
 *.pyc
