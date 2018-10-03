@@ -26,6 +26,8 @@
     <title>Tim Erickson</title>
     {% endblock header %}
 
+    <!--  META -->
+
     <!-- Yay search engine stuff! Hire me Google -->
     <meta name="description" content="Tim Erickson creates digital things— the portfolio of Tim Erickson, a senior UI/UX designer in San Francisco, CA">
     <meta name="author" content="Tim Erickson">
@@ -47,6 +49,9 @@
     <!-- Yay iOS stuff! Hire me Apple -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--  LINK -->
+
     <!-- <link rel="apple-touch-icon" href="https://timerickson.com/apple-touch-icon.png"> -->
 
     <!-- Chrome prefetching and prerendering stuff -->
@@ -68,6 +73,9 @@
     <link rel="stylesheet" href="{% static '/css/fancyzoom.css' %}">
     <link rel="stylesheet" href="{% static '/css/reset.css' %}">
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+    <!--  SCRIPT -->
+
     <script src="{% static '/js/main.js' %}"></script>
     <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -82,16 +90,28 @@
       _gs('GSN-755512-A');
     </script>
 
-
   </head>
 
   <body>
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-text">This site is archived, all dates and content are relative to 2014.</div>
+        <a class="banner-button" href="https://timerickson.com/design">VIEW NEW SITE</a>
+      </div>
+      <div class="banner-close"></div>
+    </div>
+
     {% block content %}
     Main content
     {% endblock content %}
 
     {% block scripts %}
     <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+      jQuery('.banner-close').on('click', function() {
+        jQuery(this).parent().remove();
+      });
+    </script>
     <script src="{% static '/js/main.js' %}"></script>
     <script src="{% static '/js/night.js' %}"></script>
     <script src="{% static '/js/jquery.fancyzoom.js' %}"></script>
